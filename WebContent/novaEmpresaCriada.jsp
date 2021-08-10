@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Nova Empresa Criada</title>
 	<% 
-		String nomeEmpresa = "Alura";
+		String nomeEmpresa = (String)request.getAttribute("empresa");
 		System.out.println(nomeEmpresa);
 	%>
 </head>
@@ -12,5 +12,3 @@
 	Empresa <%= nomeEmpresa %> cadastrada com sucesso
 </body>
 </html>
-
-
