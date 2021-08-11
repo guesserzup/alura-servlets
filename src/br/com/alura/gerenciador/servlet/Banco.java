@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.jasper.tagplugins.jstl.core.ForEach;
+
 public class Banco {
 	
 	private static List<Empresa> lista = new ArrayList<Empresa>();
@@ -41,6 +43,17 @@ public class Banco {
 	
 	public List<Empresa> getEmpresas() {
 		return Banco.lista;
+	}
+
+	public Empresa buscaEmpresaPeloId(Integer id) {
+		
+		for (Empresa empresa : lista) {
+			if(empresa.getId() == id) {
+				return empresa;
+			}
+		}
+		
+		return null;
 	}
 
 }
